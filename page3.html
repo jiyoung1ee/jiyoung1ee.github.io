@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        .clear{
+            clear: both;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Roboto, Roboto Thin, Roboto Regular';
+            font-size: 14px;
+            color: #444444;
+        }
+        li{
+            list-style-type: none;
+        }
+
+        /*헤더*/
+
+        header {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #logo img, #footer_logo img  {
+            width: 50px;
+            height: auto;
+        }
+
+        /*메뉴*/
+        #sub_menu {
+            width: 234px;
+            float: right;
+
+        }
+        
+        #menus li, footer li {
+            display: inline;
+            list-style: none;
+        }
+        nav ul #menus {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menus {
+            display: flex;
+            gap: 40px;
+        }
+ /* 메인, 어사이드랑 섹션 */
+    section{
+    width: 80%;
+    margin: 70px auto;
+}
+    .margin_h2{
+    margin-bottom: 20px;
+}
+.main-container {
+    display: flex;
+    width: 80%;
+    margin: 30px auto;
+    flex-wrap: wrap; 
+}
+
+aside {
+    flex: 1; 
+    min-width: 250px; 
+    width: 80%;
+    margin: 30px auto;
+}
+
+.second h2 {
+    margin-bottom: 20px;
+}
+
+section.first {
+    flex: 2; 
+    min-width: 300px;
+}
+
+section.second {
+    flex: 2;
+    min-width: 300px;
+    margin-top: 20px;
+}
+.record {
+    display: flex; 
+    gap: 40px;
+}
+
+.record ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.record ul li {
+    margin-bottom: 5px; 
+    white-space: nowrap;
+}
+
+.feature-ability {
+    display: flex;
+    gap: 200px;
+    flex-wrap: nowrap; 
+}
+
+.feature ul li,
+.ability ul li {
+    padding: 2px 0;    
+}
+
+.feature {
+    flex: 2;  
+    min-width:350px; 
+}
+
+.ability {
+    flex: 1;
+    min-width: 200px;
+    margin-bottom: 30px;
+}
+
+.feature-record {
+    display: flex;
+    gap: 30px; 
+    flex: 1;
+}
+
+.feature-record ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.feature h2, .feature-record li, .ability h2, .ability li {
+    word-break: keep-all; 
+}
+
+.hisrecord {
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    row-gap: 0;
+    column-gap: 50px;
+}
+
+#righta {
+    float: right;
+    margin-top: 100px;
+}
+
+.hisrecord ul {
+    display: contents;
+}
+
+.hisrecord ul li {
+    list-style: none;
+    text-align: center;
+    padding: 5px 0;
+}
+
+.feature ul li::before,
+.ability ul li::before {
+    content: "•";
+    color: #FFCF67;
+    display: inline-block;
+    width: 20px;
+}
+
+.feature h2, .ability h2 {
+    margin-bottom: 20px;
+}
+
+.dog-img {
+    width: 100%;
+    transition: 0.3s ease-in-out; /* 자연스러운 전환 */
+}
+
+.dog-img:hover {
+    content: url('29.png'); /* 마우스 올렸을 때 바뀌는 이미지 */
+}
+
+
+
+/* 푸터 */
+footer {
+    border-top: #666 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 50px;
+}
+.footer_left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#footer_logo {
+    margin-right: 50px;
+}
+footer ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding-left: 0;
+    margin: 0;
+}
+footer .copyright {
+    font-size: 12px;
+    color: #666;
+}
+
+/* a CSS */
+a {
+    text-decoration: none;
+    color: #444444;
+}
+a:visited {
+    color: #8b8b8b;
+}
+a:hover, a:active {
+    color: #FFCF67;
+}
+body::selection{
+            background-color: #FFCF67;
+            color: #F6FCFC;}
+
+
+/* 반응형 */
+@media only screen and (max-width: 900px){
+    header { 
+        flex-direction: column;
+        max-width: 500px;
+        gap: 15px;
+    }
+    #menus li {
+        font-size: 12px;
+    }
+.main-container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    section.first, section.second {
+        width: 100%;
+        min-width: unset; 
+        margin: 0 auto;
+    }
+
+    
+
+    .feature-ability {
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    .hisrecord {
+        grid-template-rows: 1fr;
+        gap: 20px;
+    }
+}
+        </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="무제-1.png" width="50px"></a>
+        </div>
+        <nav>
+            <ul id="menus">
+            <li><a href="page1.html">제품</a></li>
+            <li><a href="page2.html">추천 앱</a></li>
+            <li><a href="page3.html">멍프로필</a></li>
+            <li><a href="page4.html">멍갤러리</a></li>
+            <li><a href="page5.html">찌개에게</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="main-container">
+    <aside>
+    <h2 class="margin_h2">멍프로필</h2>
+
+    <img src="26.png" class="dog-img" alt="메이">
+    <br>
+    <br>
+    <ul>
+        <li>MAY</li>
+        <li><h2>메이</h2></li>
+        <li><small>160508 | #악마견 #공주님 #사고뭉치</small></li>
+    </ul>
+    <br>
+    <br>
+    <h2>
+        "<br>
+        주인 한 줄 평:<br>
+        이 강아지는 하루라도 사고를 안 치면 <br>엉덩이에 뿔이 자랍니다.
+    </h2>
+    </aside>
+
+    <div class="right-sections">
+        <section class="first">
+        <div class="feature-ability">
+        <div class="feature">
+        <h2>특징</h2>
+        <div class="record">
+        <ul>
+            <li>동그란 눈에</li>
+            <li>까만 작은 코</li>
+            <li>하얀 털을 가진 예쁜 강아지</li>
+            <li>사고뭉치</li>
+        </ul>
+        <ul>
+            <li>좋아! : 간식, 산책, 사고치기, 내 맘대로 굴기</li>
+            <li>싫어! : 혼나기, 간식 못 먹기, 언니 침대 못 뺏기</li>
+            <li>강아지 침대보다도 사람 침대를 선호한다.</li>
+            <li>편식이 심하다. (당근, 잎 X)</li>
+        </ul>
+        </div>
+        </div>
+        <div class="ability">
+        <h2>능력</h2>
+        <ul>
+            <li>화나면 패드 밖에 쉬하기</li>
+            <li>간식 몰래 훔쳐먹기</li>
+            <li>산책하면서 풀 뜯어 먹기</li>
+            <li>가족들 괴롭히기</li>
+            <li>이쁨 독차지 하기</li>
+            <li>새로운 가족들 질투하기</li>
+        </ul>
+        </div>
+        </div>
+    </section>
+
+    <section class="second">
+        <h2>견주의 기록</h2>
+        <div class="hisrecord">
+        <ul>
+            <li>2016</li>
+            <li>2018</li>
+            <li>2020</li>
+        </ul>
+        <ul>
+            <li>당근을 박살내다</li>
+            <li>침대를 다 뜯다</li>
+            <li>언니 침대를 빼앗다</li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <ul>
+            <li>2022</li>
+            <li>2024</li>
+            <li>2026</li>
+        </ul>
+        <ul>
+            <li>사고를 치다</li>
+            <li>간식을 다 먹다</li>
+            <li>사고를 칠 예정.</li>
+        </ul>
+        </div>
+    </section>
+
+    <a href="page6.html" id="righta">호야 프로필 보러가기 --------&gt; </a>
+</div>
+    </div>
+    <footer>
+        <div class="footer_left">
+        <ul>
+            <li><a href="page1.html">제품</a></li>
+            <li><a href="page2.html">추천 앱</a></li>
+            <li><a href="page3.html">멍프로필</a></li>
+            <li><a href="page4.html">멍갤러리</a></li>
+            <li><a href="page5.html">찌개에게</a></li>
+        </ul>
+        <span class="copyright"> Copyright. &copy; 2025 LEE JIYOUNG. </span>
+        </div>
+
+    <div id="footer_logo">
+        <a href="index.html"><img src="무제-1.png" width="50px"></a>
+    </div>
+    </footer>
+</body>
+</html>

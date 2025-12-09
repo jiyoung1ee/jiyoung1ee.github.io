@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>index</title>
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto, Roboto Thin, Roboto Regular';
+    font-size: 14px;
+    color: #444444;
+}
+li{
+    list-style-type: none;
+}
+
+/* 헤더 */
+header {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+#logo img, #footer_logo img  {
+    width: 50px;
+    height: auto;
+}
+#menus li {
+    display: inline;
+}
+#menus {
+    display: flex;
+    gap: 40px;
+}
+
+/* 섹션 */
+aside, section{
+    width: 80%;
+    margin: 30px auto;
+}
+aside h2, section h2 {
+    margin-bottom: 20px;
+}
+
+/* 카드 */
+.card img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    display: block;
+    margin: 0 auto 10px;
+}
+.products { 
+    display:flex; 
+    gap:30px; 
+    flex-wrap:wrap;
+    justify-content: center; 
+}
+.card {   
+    width: calc((100% - 60px) / 3);
+    border: 1px solid #ddd;
+    padding: 12px;
+    border-radius: 8px;
+    background: #fff;
+    box-sizing: border-box;
+    transition: all 0.3s ease; 
+    text-align: center;
+}
+.badge { 
+    display:inline-block; 
+    padding:2px 6px; 
+    font-size:12px; 
+    border-radius:4px; 
+    background:#f1f1f1; 
+    margin-right:6px; 
+}
+
+.card:hover {
+    transform: translateY(-10px); /* 위로 10px 이동 */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); /* 아래쪽 그림자 */
+}
+
+/* 푸터 */
+footer {
+    border-top: #666 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 50px;
+}
+.footer_left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#footer_logo {
+    margin-right: 50px;
+}
+footer ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding-left: 0;
+    margin: 0;
+}
+footer .copyright {
+    font-size: 12px;
+    color: #666;
+}
+
+/* a CSS */
+a {
+    text-decoration: none;
+    color: #444444;
+}
+a:visited {
+    color: #8b8b8b;
+}
+a:hover, a:active {
+    color: #FFCF67;
+}
+
+body::selection{
+            background-color: #FFCF67;
+            color: #F6FCFC;}
+
+
+/* 반응형 */
+@media only screen and (max-width: 900px){
+    header { 
+        flex-direction: column;
+        max-width: 500px;
+        gap: 15px;
+    }
+    #menus li {
+        font-size: 12px;
+    }
+
+}
+@media (max-width: 600px){
+    .card {
+        width: 100%;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <div id="logo">
+        <a href="index.html"><img src="무제-1.png" width="50px"></a>
+    </div>
+    <nav>
+        <ul id="menus">
+            <li><a href="page1.html">제품</a></li>
+            <li><a href="page2.html">추천 앱</a></li>
+            <li><a href="page3.html">멍프로필</a></li>
+            <li><a href="page4.html">멍갤러리</a></li>
+            <li><a href="page5.html">찌개에게</a></li>
+        </ul>
+    </nav>
+</header>
+
+<aside>
+    <h2>추천 앱</h2>
+    <div class="products">
+        <div class="card">
+            <img src="7.png">
+            <p>반려동물 커뮤니티 앱</p>
+            <h4>멍냥보감</h4>
+            <br>
+            <ul>
+                <li>평점 ★★★★★</li>
+                <li>육아수첩, 유저소통까지 담긴 앱</li>
+                <li>산책 기록이 정말 좋은 앱</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="8.png">
+            <p>반려동물 여행앱</p>
+            <h4>반려생활</h4>
+            <br>
+            <ul>
+                <li>평점 ★★★★★</li>
+                <li>근처 반려동물 산책길도 확인 가능</li>
+                <li>유저들의 후기까지 담긴 최고의 앱</li>
+            </ul>
+        </div>
+        <div class="card">
+            <img src="9.png">
+            <p>반려동물 AI 건강체크앱</p>
+            <h4>티티케어</h4>
+            <br>
+            <ul>
+                <li>평점 ★★☆☆☆</li>
+                <li>간단하게 알기 쉬운 건강 앱</li>
+                <li>현재 KT 부가서비스 제외 사용 불가</li>
+            </ul>
+        </div>
+        </div>
+        </aside>
+
+        <section>
+        <h2>자세한 후기!</h2>
+    <div class="products">
+        <div class="card">
+            <img src="11.png">
+            <h4>멍냥보감은 이런 게 좋아요!</h4>
+            <p>우리 강아지의 일상을 전부 적을 수 있어 좋다. <br>
+            비만 등의 사소한 건강검진도 가능해<br>
+        노견이 쓰기에도 좋은 앱이다.</p>
+        </div>
+        <div class="card">
+            <img src="12.png">
+            <h4>반려생활은 이런 게 좋아요!</h4>
+            <p>먼 곳 뿐만 아니라 당장 갈 수 있는 곳도 <br>
+                추천해주어 유용하다.
+                <br>유저들이 직접 후기를 올려 비교하기도 좋다.</p>
+        </div>
+        <div class="card">
+            <img src="13.png">
+            <h4>티티케어는 이런 게 좋아요!</h4>
+            <p>사진만 찍으면 건강검진이 가능하다.<br>
+            동물병원에 가기 전 심각한 것이 아니라면<br>
+        집에서 해결할 수 있어서 좋은 앱이다.</p>
+        </div>
+    </section>
+
+<footer>
+    <div class="footer_left">
+        <ul>
+            <li><a href="page1.html">제품</a></li>
+            <li><a href="page2.html">추천 앱</a></li>
+            <li><a href="page3.html">멍프로필</a></li>
+            <li><a href="page4.html">멍갤러리</a></li>
+            <li><a href="page5.html">찌개에게</a></li>
+        </ul>
+        <span class="copyright"> Copyright. &copy; 2025 LEE JIYOUNG. </span>
+    </div>
+    <div id="footer_logo">
+        <a href="index.html"><img src="무제-1.png" width="50px"></a>
+    </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index</title>
+    <style>
+        .clear{
+            clear: both;
+        }
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Roboto, Roboto Thin, Roboto Regular';
+            font-size: 14px;
+            color: #444444;
+        }
+        li{
+            list-style-type: none;
+        }
+
+        /*헤더*/
+
+        header {
+            width: 80%;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        #logo img, #footer_logo img  {
+            width: 50px;
+            height: auto;
+        }
+
+        /*메뉴*/
+        #sub_menu {
+            width: 234px;
+            float: right;
+            border: solid 1px red;
+        }
+        
+        #menus li, footer li {
+            display: inline;
+            list-style: none;
+        }
+        nav ul #menus {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 0;
+            padding: 0;
+        }
+
+        #menus {
+            display: flex;
+            gap: 40px;
+        }
+ /* 메인, 어사이드랑 섹션 */
+        aside, section{
+    width: 80%;
+    margin: 30px auto;
+}
+    aside h2{
+    margin-bottom: 20px;
+}
+
+    section.letter-paper {
+        width: 80%;
+        margin: 40px auto;
+        padding: 40px 50px;
+        background: #ffffff; /* 편지지 색 */
+        border: 2px solid #b2b2b2;
+        border-radius: 15px;
+    }
+
+    section.letter-paper h2 {
+        text-align: center;
+        margin-bottom: 25px;
+        color: #555;
+    }
+
+    .letter-content {
+        min-height: 300px;
+        padding: 20px;
+        font-size: 16px;
+        line-height: 1.6;
+        white-space: pre-wrap; /* 줄바꿈 유지 */
+        border: 1px dashed #FFCF67; /* 내용 구분선 느낌 */
+        border-radius: 8px;
+        background-color: #fffefc;
+    }
+
+
+/* 푸터 */
+footer {
+    border-top: #666 solid 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 20px 0 20px 50px;
+}
+.footer_left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+#footer_logo {
+    margin-right: 50px;
+}
+footer ul { 
+    display: flex; 
+    flex-wrap: wrap; 
+    gap: 30px;
+    padding-left: 0;
+    margin: 0;
+}
+footer .copyright {
+    font-size: 12px;
+    color: #666;
+}
+
+/* a CSS */
+a {
+    text-decoration: none;
+    color: #444444;
+}
+a:visited {
+    color: #8b8b8b;
+}
+a:hover, a:active {
+    color: #FFCF67;
+}
+body::selection{
+            background-color: #FFCF67;
+            color: #F6FCFC;}
+
+
+/* 반응형 */
+@media only screen and (max-width: 900px){
+    header { 
+        flex-direction: column;
+        max-width: 500px;
+        gap: 15px;
+    }
+    #menus li {
+        font-size: 12px;
+    }
+    section.letter-paper{
+        padding:30px 20px;
+    }
+    .letter-content{
+        font-size: 80%;
+    }
+
+}
+
+        </style>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="index.html"><img src="무제-1.png" width="50px"></a>
+        </div>
+        <nav>
+            <ul id="menus">
+            <li><a href="page1.html">제품</a></li>
+            <li><a href="page2.html">추천 앱</a></li>
+            <li><a href="page3.html">멍프로필</a></li>
+            <li><a href="page4.html">멍갤러리</a></li>
+            <li><a href="page5.html">찌개에게</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <aside>
+    <h2>찌개에게</h2>
+    </aside>
+
+<section class="letter-paper">
+    <div class="letter-content">
+
+        찌개야 안녕. 네 동생 지영이야.
+        네가 떠나간 뒤로 내가 계속 널 생각하면
+        강아지 별에서 마음 편히 못 놀까 봐 여태 잊고 살다가 이제야 편지를 쓴다!
+        정말 보고 싶은 내 할머니 찌개!! 그곳에선 할머니 할아버지한테 이쁨 받고 있겠지?
+        그래서 더 슬퍼하지 않기로 했어. 너무 서운해 하지 말고...
+
+        가끔은 꿈에도 들렀으면 좋겠다!
+        정말 너무 보고 싶다! 내 첫 강아지 찌개야!!
+        곧 있으면 내가 너랑 동갑이 된다. 꼭 축하하러 와주고!
+        네가 좋아하던 영수증도 많이 모아놨으니까 얼른 찾아와! :>
+
+    </div>
+</section>
+
+
+
+    <footer>
+        <div class="footer_left">
+        <ul>
+            <li><a href="page1.html">제품</a></li>
+            <li><a href="page2.html">추천 앱</a></li>
+            <li><a href="page3.html">멍프로필</a></li>
+            <li><a href="page4.html">멍갤러리</a></li>
+            <li><a href="page5.html">찌개에게</a></li>
+        </ul>
+        <span class="copyright"> Copyright. &copy; 2025 LEE JIYOUNG. </span>
+        </div>
+
+    <div id="footer_logo">
+        <a href="index.html"><img src="무제-1.png" width="50px"></a>
+    </div>
+    </footer>
+</body>
+</html>
