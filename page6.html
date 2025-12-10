@@ -114,8 +114,9 @@ section.second {
 
 .feature-ability {
     display: flex;
-    gap: 200px;
+    gap: 10px;
     flex-wrap: nowrap; 
+    
 }
 
 .feature ul li,
@@ -124,14 +125,13 @@ section.second {
 }
 
 .feature {
-    flex: 2;  
-    min-width:350px; 
+    flex: 3;  
+    min-width:500px; 
 }
 
 .ability {
     flex: 1;
     min-width: 200px;
-    margin-bottom: 30px;
 }
 
 .feature-record {
@@ -158,8 +158,9 @@ section.second {
 }
 
 #righta {
-    float: right;
-    margin-top: 100px;
+    margin-left: auto;
+    margin-top: 20px;
+    display: block;
 }
 
 .hisrecord ul {
@@ -227,6 +228,14 @@ footer .copyright {
     font-size: 12px;
     color: #666;
 }
+.right-sections {
+    display: flex;           
+    flex-direction: column;  
+    align-items: center;    
+    gap: 20px;            
+    max-width: 80%;
+    margin: 0 auto;    
+}
 
 /* a CSS */
 a {
@@ -261,11 +270,16 @@ a:hover, a:active {
         margin: 0 auto;
     }
 
-    
-
     .feature-ability {
         flex-direction: column;
         gap: 40px;
+    }
+
+    .feature {
+        overflow-x: auto;  
+        -webkit-overflow-scrolling: touch; 
+        min-width: 200px;          
+        flex: 0 0 auto;       
     }
 
     .hisrecord {
@@ -308,7 +322,7 @@ a:hover, a:active {
     <h2>
         "<br>
         주인 한 줄 평:<br>
-        이 강아지는 너무 착해서 동네바보형 <br>이란 별명도 있어요.
+        이 강아지는 너무 착해서 <br>동네바보형이란 별명도 있어요.
     </h2>
     </aside>
 
